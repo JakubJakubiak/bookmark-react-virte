@@ -57,7 +57,7 @@ const DownloadBrowser = () => {
                 className="dotsIllustration"
                 alt="dots illustration"
               />
-                <a href="/download" className="buttonBlueBrowser"> 
+                <a href="#" className="buttonBlueBrowser"> 
                 {data.textBooton}
               </a>
             </div>

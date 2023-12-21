@@ -25,9 +25,9 @@ const Header = () => {
       
 
       <ul className={`menu-items`} style={{ display: menuItemsDisplay }}>
-        <a href="/">FEATURES</a>
-        <a href="/about">PRICING</a>
-        <a href="/contact">CONTACT</a>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#">CONTACT</a>
         <div className="login">LOGIN</div>
 
         <ul className="iconMenu">
