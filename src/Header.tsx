@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './syles/Header.sass';
 import bgDots from './images/logo-bookmark.svg';
 import hamburger from './images/icon-hamburger.svg';
