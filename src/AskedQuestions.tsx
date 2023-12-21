@@ -15,7 +15,7 @@ const FaqItem = ({ question, answer }: { question:string, answer:string }) => {
   return (
     <div className={`faq-item ${isActive ? 'active' : ''}`}>
     <div className="faq-question" onClick={toggleQuestion}>
-      <span>{question}</span>
+      <p>{question}</p>
       <img
         className={`arrow ${isActive ? 'up' : 'down'}`}
         src={ArrowIcon}
@@ -37,7 +37,7 @@ const AskedQuestions = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis",
     },
     {
-      question: "How can | request a new browser?",
+      question: "How can I request a new browser?",
       answer:
         "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
     },
@@ -54,17 +54,22 @@ const AskedQuestions = () => {
   ];
 
   return (
+    <>
     <div>
         <div className="textCenter">
         <h1> Frequently Asked Questions</h1>
         <p>
-        Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us..
+        Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
         </p>
         </div>
             {faqData.map((item, index) => (
             <FaqItem key={index} question={item.question} answer={item.answer} />
             ))}
+            
+  
     </div>
+    <div className="textCenterButton">More Info</div>
+    </>
   );
 };
 

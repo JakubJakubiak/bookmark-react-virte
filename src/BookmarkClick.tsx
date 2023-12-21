@@ -51,7 +51,7 @@ const BookmarkClick = () => {
       </div>
       <div className="heros">
         <div className="togetherimageBox">
-          <div className="background" />
+          <div className="backgroundImageBox" />
           <img
             src={currentButtonData.illustration}
             className="imageIllustration"
