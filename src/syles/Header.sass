@@ -1,0 +1,134 @@
+.menu
+  display: flex
+  margin: 20px 100px
+  justify-content: space-between
+  align-items: center
+
+  .iconMenu
+    display: none
+
+  .menu-items
+    list-style: naone
+    display: flex
+
+    img
+      margin-right: 10px
+
+    >a
+      padding: 10px 20px
+      text-decoration: none
+      margin-right: 20px
+
+      &:hover
+        color: #d96363
+
+  .login
+    color: #fff
+    display: inline-block
+    border: 1px solid hsl(0, 94%, 66%)
+    border-radius: 5px
+
+    cursor: pointer
+    background: hsl(0, 94%, 66%)
+    transition: color 0.3s, border 0.3s
+
+    padding: 10px 20px
+
+    border: 1px solid #d96363
+  
+  .login:hover
+    color: #fff
+    border: 1px solid #d96363
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+    &:active
+      color: #fff
+      border: 1px solid #d96363
+      background-color: #d96363
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+  .buttonMenu
+    display: none
+  
+
+  @media (max-width: 768px)
+    .logoFilter
+      z-index: 1000
+      position: relative
+
+    .logoFilterActive
+      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)
+      z-index: 1000
+      position: relative
+
+    .buttonMenu
+      display: flex
+      background: none
+      border: 0
+      z-index: 1000
+
+    .login
+      border: 1px solid #fff
+      background: 000000
+      padding: 20px 30vw
+      
+
+      &:hover
+        color: #d96363
+
+
+    .iconMenu
+      display: flex 
+      padding-top: 50px
+
+      >a
+        padding: 0 20px
+      
+
+    .menu-items
+      flex-direction: column
+      align-items: center
+      display: none
+      position: absolute
+      top: -20px
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      padding: 0
+      margin: 0
+      background-color: #242b46f1
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+      z-index: 5
+
+      img
+        margin-right: 10px
+
+      >a
+        top: 40px
+        padding: 10px 100px
+        text-decoration: none
+        color: #fff
+        margin:20px 0
+        padding: 20px 25vw
+        border-bottom: 1px solid #eadede
+
+      &:hover
+        color:#d96363
+        
+
+    &.active .menu-items
+      display: flex
+    
+    .login
+
+      border: 1px solid #fff
+
+
+    
+
+
+  
+
+
+

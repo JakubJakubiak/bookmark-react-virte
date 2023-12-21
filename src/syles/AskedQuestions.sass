@@ -1,0 +1,53 @@
+.faq-item 
+    margin-bottom: 10px
+    max-width: 70vw
+    margin: 0 auto
+
+
+.faq-question 
+    text-align: left
+    position: relative
+    padding: 15px
+    font-weight: bold
+    max-width: 70vw
+    margin: 0 10vw
+    border-bottom: 1px solid hsl(229, 8%, 60%)
+   
+
+
+
+.arrow 
+    position: absolute
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+    transition: transform 0.3s ease-out
+
+.arrow.up 
+    transform: translateY(-50%) rotate(-180deg)
+
+.faq-question:hover 
+    color: #FA5757
+
+
+
+.faq-answer 
+    max-height: 0px
+    max-width: 50vw
+    overflow: hidden
+    padding: 0
+    transition: max-height 0.3s ease-out
+    text-align: justify
+    margin: 0 15vw 0 15vh
+
+.faq-item.active .faq-answer 
+    max-height: 50vh
+    padding:  20px 0
+    
+
+
+    
+
+
+
+

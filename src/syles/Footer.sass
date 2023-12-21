@@ -1,0 +1,79 @@
+footer
+  padding: 1.5rem 7rem
+  background: hsl(229, 31%, 21%)
+ 
+
+  nav
+    display: flex
+    align-items: center
+
+    a img
+      filter: invert(1) brightness(100%) hue-rotate(180deg)
+
+    .links
+      flex: 1
+      margin-left: 4rem
+
+      li
+        list-style: none
+        display: inline-block
+        margin-right: 1.5rem
+
+        a
+          text-decoration: none
+          color: hsl(0, 0%, 100%)
+          text-transform: uppercase
+          font-size: 1.7rem
+          transition: 0.5s
+
+          &:hover, &:focus
+            color: #FA5757
+
+    .social-links
+      display: flex
+      align-items: center
+
+      li
+        display: inline-block
+        list-style: none
+        margin-left: 2rem
+
+        a img
+          filter: invert(0)
+
+  .attribution
+    color: hsl(0, 0%, 100%)
+    font-size: 1rem
+    margin-top: 2rem
+    text-align: center
+
+    a
+      text-decoration: none
+      color: hsl(229, 8%, 60%)
+
+@media (max-width: 780px)
+    footer 
+        padding: 2rem 1.5rem
+    
+    footer nav 
+        align-items: center
+        justify-content: center
+        text-align: center
+        flex-direction: column
+    
+
+    footer nav a img 
+        margin-bottom: 1rem
+        filter: invert(1) brightness(100%) hue-rotate(180deg)
+    
+
+    footer nav .links 
+        margin-left: 0rem
+        margin-bottom: 2rem
+    
+
+    footer nav .links li 
+        display: block
+        margin-right: 0rem
+        text-align: center
+        margin-bottom: 1.5rem
