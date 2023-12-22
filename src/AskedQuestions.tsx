@@ -1,7 +1,9 @@
 // AppAndFaqItem.js
 
 import  { useState } from "react";
-import ArrowIcon from "./images/icon-arrow.svg";
+
+import  ArrowIcon   from "./images/icon-arrow.svg";
+
 
 import "./syles/AskedQuestions.sass"; 
 
@@ -13,17 +15,24 @@ const FaqItem = ({ question, answer }: { question:string, answer:string }) => {
   };
 
   return (
-    <div className={`faq-item ${isActive ? 'active' : ''}`}>
-    <div className="faq-question" onClick={toggleQuestion}>
-      <p>{question}</p>
-      <img
-        className={`arrow ${isActive ? 'up' : 'down'}`}
-        src={ArrowIcon}
-        alt="Arrow"
-      />
+    <div className={`faq-item ${isActive ? "active" : ""}`}>
+      <div className="faq-question" onClick={toggleQuestion}>
+        <p>{question}</p>
+        {isActive ? (
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="12"
+            className={`arrow ${isActive ? "up" : "down"}`}
+          >
+            <path fill="none" stroke="#FA5757" stroke-width="3" d="M1 1l8 8 8-8" />
+          </svg>
+        ) : (
+          <img className={`arrow ${isActive ? "up" : "down"}`} src={ArrowIcon} alt="Arrow" />
+        )}
+      </div>
+      <div className="faq-answer">{answer}</div>
     </div>
-    <div className="faq-answer">{answer}</div>
-  </div>
   
   )
 
