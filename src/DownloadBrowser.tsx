@@ -2,9 +2,8 @@ import chrome from "./images/logo-chrome.svg";
 import firefox from "./images/logo-firefox.svg";
 import opera from "./images/logo-opera.svg";
 import BrowserDots from "./images/bg-dots.svg";
-
 import './syles/DownloadBrowser.sass';
-// 
+
 const DownloadBrowser = () => {
   const buttonsData = [
     {
@@ -57,7 +56,7 @@ const DownloadBrowser = () => {
                 className="dotsIllustration"
                 alt="dots illustration"
               />
-                <a href="#" className="buttonBlueBrowser"> 
+                <a href="" className="buttonBlueBrowser"> 
                 {data.textBooton}
               </a>
             </div>

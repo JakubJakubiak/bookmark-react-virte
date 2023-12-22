@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import illustration1 from "./images/illustration-features-tab-1.svg";
 import illustration2 from "./images/illustration-features-tab-2.svg";
 import illustration3 from "./images/illustration-features-tab-3.svg";
+import closeIcon from './images/icon-close.svg';
 import './syles/BookmarkClick.sass';
 
 const BookmarkClick = () => {
@@ -21,12 +22,25 @@ const BookmarkClick = () => {
     {
       textBooton: "Easy Sharing",
       illustration: illustration3,
-      title: "hare your bookmarks",
+      title: "Share your bookmarks",
       text: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
     },
   ];
 
+  
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayPopup, setDisplayPopup] = useState(false);
+
+  useEffect(() => {
+
+    const delayTime = 30000; 
+
+    const timerId = setTimeout(() => {
+      setDisplayPopup(true);
+    }, delayTime);
+
+    return () => clearTimeout(timerId);
+  }, []);
 
   const handleButtonClick = (index: React.SetStateAction<number>) => {
     setCurrentIndex(index);
@@ -34,22 +48,25 @@ const BookmarkClick = () => {
 
   const currentButtonData = buttonsData[currentIndex];
 
+
+  const handleCloseButtonClick = () => {
+    setDisplayPopup(false);
+  };
+
   return (
     <div>
-      <div className="boxTexts ">
-     
+      <div className="boxTexts">
         {buttonsData.map((_data, index) => (
           <div
-            key={index} 
-            className={currentIndex === index ? "buttonMenuClick_active":"buttonMenuClick"}
+            key={index}
+            className={currentIndex === index ? "buttonMenuClick_active" : "buttonMenuClick"}
             onClick={() => handleButtonClick(index)}
           >
             {_data.textBooton}
           </div>
-          
         ))}
       </div>
-      <div className="heros">
+      <div className="heros" >
         <div className="togetherimageBox">
           <div className="backgroundImageBox" />
           <img
@@ -66,7 +83,25 @@ const BookmarkClick = () => {
           </a>
         </div>
       </div>
+
+      <div className={`popup ${displayPopup ? 'active' : ''}`}>
+        
+        <img
+          src={buttonsData[1].illustration}
+          className="popupImage"
+          alt="illustration"
+        />
+        <div>
+        <button className="closeButton" onClick={handleCloseButtonClick}>
+          <img src={closeIcon} alt="Close" />
+      
+        <h2>{buttonsData[1].title}</h2>
+        <p>{buttonsData[1].text}</p>
+        </button>
+        </div>
+      </div>
     </div>
+
   );
 };
 
